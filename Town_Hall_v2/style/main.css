@@ -1,0 +1,93 @@
+/* So the HTML5 structural tags work in older browsers */
+article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+
+/* the styles for the elements */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 87.5%;
+    width:600px;
+    margin: 0 auto 0 auto;
+    border:solid #800000;
+    background-color: #fffded;
+}
+
+/* the styles for the header */
+hgroup img {
+	float: left;
+    padding-bottom: 1em;
+    padding-left:30px;
+    padding-right: 30px;
+}
+hgroup{
+  
+    background: -webkit-linear-gradient(#800000,#fffded,white,#fffded,#800000,30deg);
+    border-bottom:solid #800000;
+    padding-top:1.5em;
+   
+    padding-bottom:1.5em;
+
+}
+hgroup h1{
+padding-top:.5em;
+padding-bottom:.25em;
+color: #800000;
+
+}
+hgroup h2{
+    font-style: italic;
+    padding-bottom:0.25em
+}
+h1{
+    font-size: 150%;
+    color:#800000;
+}
+h2{
+    font-size: 150%;
+    
+}
+#speakers{
+    font-size:175%;
+    color:black;
+    border-radius:10px ;
+    margin-top: 1em;
+    margin-bottom:1em ;
+    padding-top: 10px;
+    box-shadow: 1em;
+    padding-bottom:10px;
+    text-decoration: #800000;
+    border-top: solid #800000 ;
+    border-bottom:solid #800000;
+}
+.shadow{
+text-shadow:2px 3px 3px #800000;
+}
+href
+/* the styles for the section */
+section {
+	clear: left;
+    padding-left:1em;
+    padding-right: 12ems;
+}
+section Blockquote{
+padding-left: 2em;
+text:italic;
+padding-right:2em;
+}
+section ul{
+    padding-bottom: 1.5em;
+    padding-left: 1.25em;
+}
+section ul li{
+    padding-bottom: 0.35em;
+}
+footer{
+    padding-top: 1em;
+    padding-bottom: 1em;
+border-top:solid #800000;
+}
+footer p{
+    text-align: center;
+}
+/* the styles for the footer */
