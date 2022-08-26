@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TownHall Website</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="./style/main.css">
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+</head>
+<body>
+<div class="para">
+    <hgroup>
+        <img src="./speakers/Images/town_hall_logo.gif">
+       <h1> San Joaquin Valley Town Hall</h1>
+        <h2>Celebrating our <span class="shadow">75th</span>  Year</h2>
+    </hgroup>
+  
+    <nav>
+    	<ul>
+    		<li><a class="current" href="index.html">Home</a></li>
+    		<li><a href="speakers.html">Speakers</a></li>
+    		<li><a href="/luncheons.html">Luncheons</a></li>
+    		<li><a href="tickets.html">Tickets</a></li>
+            <li><a href="About.html">About Us</a></li>
+    	</ul>
+    </nav>
+    
+    <section>
+        <div class="b1">
+        <h2>forms for submission</h2>
+        <h1>Become a Member</h1>
+    	<form action="register_account.html" method="get"
+        	name="registration_form" id="registration_form">
+    	
+    		<fieldset>
+        		<legend>Member Information</legend>
+				<div class="space">
+        		<label for="first_name">First Name:</label>
+				<input type="text" name="first_name" id="first_name" required><br>
+</div>
+              <div class="space">
+				<label for="last_name">Last Name:</label>
+				<input type="text" name="last_name" id="last_name" required><br>
+				</div>
+				<div class="space">
+				<label for="address">Address:</label>
+				<input type="text" name="address" id="address"><br>
+				</div>
+				<div class="space">
+				<label for="city">City:</label>
+				<input type="text" name="city" id="city" required><br>
+				</div>
+				<div class="space">
+				<label for="state">State:</label>
+				<input type="text" name="state" id="state" required maxlength="2" placeholder="2-character code"><br>
+				</div>
+				<div class="space">
+				<label for="zip">ZIP Code:</label>
+				<input type="text" name="zip" id="zip" required placeholder="5 or 9 digits" 
+				       pattern="^\d{5}(-\d{4})?$" title="Either 5 or 9 digits"><br>
+					   </div>
+					   <div class="space">
+				<label for="phone">Phone Number:</label>
+				<input type="tel" name="phone" id="phone" placeholder="999-999-9999" 
+				       pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Must be 999-999-999 format"><br>
+					   </div>
+				</fieldset>
+                <fieldset>
+                    <legend>Ordering Information</legend>
+					<div class="space">
+                    <label for="Ordering">Order Type:</label>
+                    <select name="Ordering Information" id="ordering_type">
+                        <option value="j">Member Package</option>
+                        <option value="r">Donor Package</option>            
+                        <option value="c">single tickets</option>
+                    </select><br>
+					</div>
+					<div class="space">
+                    <label for="password">Number of Tickets:</label>
+                    <input type="text" name="Number of Tickets" value="2" size="6" autofocus required><br>
+					</div>
+                </fieldset>
+			<fieldset>
+				<legend>Card Information</legend>
+				<div class="space">
+				<label for="card_type">Membership Type:</label>
+				<select name="card_type" id="card_type">
+				    <option value="j">MasterCard</option>
+				    <option value="r">Rupay</option>            
+				    <option value="c">visa</option>
+				</select><br>	
+				</div>
+				<div class="spce">
+                <label for="card_number">Card Number:</label>
+                    <input type="text" placeholder="enter 16 digit card number"><br>
+</div>
+<div class="spacee">
+				<label for="Expiration_date">Expiration Date:</label>
+				<input type="month" name="starting month" id="starting_month" required>
+        
+			</div>
+				</fieldset>
+				
+				<fieldset id="buttons">
+				<legend>Submit Your Membership</legend>
+				<label>&nbsp;</label>
+				<div class="spaces">
+				<input type="submit" id="submit" value="Submit">
+				<input type="reset" id="reset" value="Reset Fields"><br>
+				</div>
+			</fieldset>
+		</form>
+
+</section>
+    <div class="b2">
+        <div >
+            <h1 id="speakers"> 2011-2012 Speakers</h1>
+        </div>
+       
+    </div>     
+<h1>October 19, 2011</h1>
+<br>
+<h2> <a href="speakers/toobin.html">Jeffrey Toobin</a></h2></h2>
+<img src="./speakers/Images/toobin75.jpg">
+
+<h1>November16, 2011</h1>
+<br>
+<h2> <a href="speakers/sorkin.html">Andrew Ross Sorkin</a></h2></h2>
+<img src="./speakers/Images/sorkin75.jpg">
+
+
+<h1>january 18, 2012</h1>
+<br>
+<h2> <a href="speakers/chua.html">Amy Chua</a></h2></h2>
+<img src="./speakers/Images/chua75.jpg">
+
+<h1>february 15, 2012</h1>
+<br>
+<h2> <a href="speakers/sampson.html">Scott sampson</a></h2></h2>
+<img src="./speakers/Images/sampson75.jpg">
+</aside>
+
+</b2>
+
+    <footer>
+        <p>(c) 2012, San Joaquin Valley Town Hall, Fresno, CA 93755</p>
+    </footer>
+</body>
+</html>
