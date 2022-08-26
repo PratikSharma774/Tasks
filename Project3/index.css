@@ -1,0 +1,33 @@
+
+#gallery img{
+    width:25%;
+    height:300px;
+    display:flex;
+    
+    flex-direction:wrap;
+    justify-content: center;
+    align-items: center;
+    object-fit:cover;
+    padding: opx 4px;
+    margin-top: 8px;
+    border-radius: 10px;
+    width:100%;
+}
+
+    #gallery img {
+    width: 50%;
+    flex-direction: wrap;
+    }
+   
+
+body{
+    margin: 0px;
+    font-family: sans-serif;
+}
+.header h1 {
+    padding-left: 571px;
+    background-color: ci;
+    border-radius: 22px;
+    background: darkcyan;
+    height: 67px;
+}
