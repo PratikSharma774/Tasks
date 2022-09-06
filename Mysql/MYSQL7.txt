@@ -1,0 +1,143 @@
+1)mysql> CREATE TABLE MY_EMPLOYEE (
+    -> ID INT(4) PRIMARY KEY AUTO_INCREMENT,
+    -> LAST_NAME VARCHAR(25),
+    -> FIRST_NAME VARCHAR(25),
+    -> USERID  VARCHAR(8),
+    -> SALARY FLOAT(9,2)
+    -> );
+Query OK, 0 rows affected, 2 warnings (0.24 sec)
+
+mysql> desc MY_EMPLOYEE;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| ID         | int         | NO   | PRI | NULL    | auto_increment |
+| LAST_NAME  | varchar(25) | YES  |     | NULL    |                |
+| FIRST_NAME | varchar(25) | YES  |     | NULL    |                |
+| USERID     | varchar(8)  | YES  |     | NULL    |                |
+| SALARY     | float(9,2)  | YES  |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+5 rows in set (0.14 sec)
+
+2)
+mysql> INSERT INTO MY_EMPLOYEE
+    -> VALUES(1,Patel,Ralph,rpatel,795);
+ERROR 1054 (42S22): Unknown column 'Patel' in 'field list'
+mysql> VALUES(1,'Patel','Ralph','rpatel',795);
+mysql> INSERT INTO MY_EMPLOYEE
+    -> VALUES('1','Patel','Ralph','rpatel','795');
+Query OK, 1 row affected (0.18 sec)
+
+mysql> INSERT INTO MY_EMPLOYEE
+    -> VALUES(2,'DANCE','BETTY','bdance',860);
+Query OK, 1 row affected (0.10 sec)
+
+mysql> INSERT INTO MY_EMPLOYEE
+    -> VALUES('3','BIri','Ben','bbiri','1100');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO MY_EMPLOYEE
+    -> VALUES(4,'Newman','CHAD','crewman',750);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO MY_EMPLOYEE
+    -> VALUES('5','Ropeburn','Audry','aropeburn','1550');
+
+mysql> INSERT INTO MY_EMPLOYEE
+    -> VALUES(5,'Ropeburn','Audry','aropburn',1550);
+Query OK, 1 row affected (0.12 sec)
+
+mysql> select *  from MY_EMPLOYEE
+    -> ;
++----+-----------+------------+----------+---------+
+| ID | LAST_NAME | FIRST_NAME | USERID   | SALARY  |
++----+-----------+------------+----------+---------+
+|  1 | Patel     | Ralph      | rpatel   |  795.00 |
+|  2 | DANCE     | BETTY      | bdance   |  860.00 |
+|  3 | BIri      | Ben        | bbiri    | 1100.00 |
+|  4 | Newman    | CHAD       | crewman  |  750.00 |
+|  5 | Ropeburn  | Audry      | aropburn | 1550.00 |
++----+-----------+------------+----------+---------+
+5 rows in set (0.00 sec)
+
+3)mysql> SET autocommit=0;
+Query OK, 0 rows affected (0.10 sec)
+
+Rows matched: 1  Changed: 1  Warnings: 0
+
+4)mysql> select *  from MY_EMPLOYEE
+    -> ;
++----+-----------+------------+----------+---------+
+| ID | LAST_NAME | FIRST_NAME | USERID   | SALARY  |
++----+-----------+------------+----------+---------+
+|  1 | Patel     | Ralph      | rpatel   | 1000.00 |
+|  2 | DANCE     | BETTY      | bdance   | 1000.00 |
+|  3 | DEXTER    | Ben        | bbiri    | 1100.00 |
+|  4 | Newman    | CHAD       | crewman  | 1000.00 |
+|  5 | Ropeburn  | Audry      | aropburn | 1550.00 |
++----+-----------+------------+----------+---------+
+5 rows in set (0.00 sec)
+
+5)
+mysql> UPDATE MY_EMPLOYEE SET salary = 1000 WHERE salary < 1000;
+Query OK, 3 rows affected (0.12 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> select *  from MY_EMPLOYEE
+    -> ;
++----+-----------+------------+----------+---------+
+| ID | LAST_NAME | FIRST_NAME | USERID   | SALARY  |
++----+-----------+------------+----------+---------+
+|  1 | Patel     | Ralph      | rpatel   | 1000.00 |
+|  2 | DANCE     | BETTY      | bdance   | 1000.00 |
+|  3 | BIri      | Ben        | bbiri    | 1100.00 |
+|  4 | Newman    | CHAD       | crewman  | 1000.00 |
+|  5 | Ropeburn  | Audry      | aropburn | 1550.00 |
++----+-----------+------------+----------+---------+
+5 rows in set (0.00 sec)
+
+6)
+mysql> UPDATE MY_EMPLOYEE SET LAST_NAME= 'DEXTER' WHERE ID =3;
+Query OK, 1 row affected (0.08 sec)
++----+-----------+------------+----------+---------+
+| ID | LAST_NAME | FIRST_NAME | USERID   | SALARY  |
++----+-----------+------------+----------+---------+
+|  1 | Patel     | Ralph      | rpatel   | 1000.00 |
+|  3 | DEXTER    | Ben        | bbiri    | 1100.00 |
+|  4 | Newman    | CHAD       | crewman  | 1000.00 |
+|  5 | Ropeburn  | Audry      | aropburn | 1550.00 |
++----+-----------+------------+----------+---------+
+4 rows in set (0.00 sec)
+ SET autocommit=1;
+
+7)
+mysql> INSERT INTO MY_EMPLOYEE
+    -> VALUES('6','BIridu','Ben stokes','biri','1200');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from MY_employee;
++----+-----------+------------+----------+---------+
+| ID | LAST_NAME | FIRST_NAME | USERID   | SALARY  |
++----+-----------+------------+----------+---------+
+|  1 | Patel     | Ralph      | rpatel   | 1000.00 |
+|  2 | DANCE     | BETTY      | bdance   |  860.00 |
+|  3 | DEXTER    | Ben        | bbiri    | 1100.00 |
+|  4 | Newman    | CHAD       | crewman  | 1000.00 |
+|  5 | Ropeburn  | Audry      | aropburn | 1550.00 |
+|  6 | BIridu    | Ben stokes | biri     | 1200.00 |
++----+-----------+------------+----------+---------+
+6 rows in set (0.00 sec)
+8)
+mysql> SAVEPOINT  savepoint;
+9)
+mysql> DELETE
+    -> FROM            My_employee;
+Query OK, 6 rows affected (0.05 sec)
+
+10)
+mysql> select * from MY_employee;
+Empty set (0.00 sec)
+11)
+mysql> ROLLBACK TO  savepoint;
+12_
+SET autocommit=1;

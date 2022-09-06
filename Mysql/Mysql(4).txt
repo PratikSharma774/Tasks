@@ -1,0 +1,157 @@
+2)mysql> select AVG(price),Min(price),Max(price) from titles;
++--------------+------------+------------+
+| AVG(price)   | Min(price) | Max(price) |
++--------------+------------+------------+
+| 900.60000000 |     0.0000 |  1389.0000 |
++--------------+------------+------------+
+1 row in set (0.01 sec)
+3)mysql> select count(types) from titles;
++--------------+
+| count(types) |
++--------------+
+|           10 |
++--------------+
+1 row in set (0.00 sec)
+4)mysql> select AVG(price) from titles;
++--------------+
+| AVG(price)   |
++--------------+
+| 900.60000000 |
++--------------+
+1 row in set (0.00 sec)
+mysql> ALTER TABLE titles
+    -> RENAME COLUMN types TO bookcategory;
+mysql> ALTER TABLE titles
+    -> RENAME COLUMN price TO averageprice;
+5)mysql> select count(title) from titles;
++--------------+
+| count(title) |
++--------------+
+|           10 |
++--------------+
+1 row in set (0.15 sec)
+mysql> ALTER TABLE titles
+    -> RENAME COLUMN title TO booktitle;
+mysql> ALTER TABLE titles
+    -> RENAME COLUMN bookcategory TO ofBooks;
+6)mysql> select booktitle from titles ORDER BY booktitle;
++------------------------------------------------------+
+| booktitle                                            |
++------------------------------------------------------+
+|                                                   |
+| But Is It User Friendly?                             |
+| Cooking with Computers: Surreptitious Balance Sheets |
+| Emotional Security: A New Algorithm                  |
+| Fifty Years in Buckingham Palace Kitchens            |
+| Fifty Years in Buckingham Palace Kitchens            |
+| Prolonged Data Deprivation: Four Case Studies        |
+| Secrets of Silicon Valley                            |
+| Silicon Valley Gastronomic Treats                    |
+| You Can Combat Computer Stress!                      |
++------------------------------------------------------+
+10 rows in set (0.00 sec)
+7)mysql> select booktitle ,AVG(averageprice) from titles ;
++-----------+-------------------+
+| booktitle | AVG(averageprice) |
++-----------+-------------------+
+| 0         |      900.60000000 |
++-----------+-------------------+
+1 row in set (0.00 sec)
+8)mysql> select MAX(averageprice) from titles limt(1);
++-------------------+
+| MAX(averageprice) |
++-------------------+
+|         1389.0000 |
++-------------------+
+|         877.0000 |
++-------------------+
+9)
+mysql> select  booktitle from titles ORDER BY booktitle ASC;
++------------------------------------------------------+
+| booktitle                                            |
++------------------------------------------------------+
+| 0                                                    |
+| But Is It User Friendly?                             |
+| Cooking with Computers: Surreptitious Balance Sheets |
+| Emotional Security: A New Algorithm                  |
+| Fifty Years in Buckingham Palace Kitchens            |
+| Fifty Years in Buckingham Palace Kitchens            |
+| Prolonged Data Deprivation: Four Case Studies        |
+| Secrets of Silicon Valley                            |
+| Silicon Valley Gastronomic Treats                    |
+| You Can Combat Computer Stress!                      |
++------------------------------------------------------+
+10 rows in set (0.00 sec)
+
+mysql> select   count(booktitle) ,booktitle from titles ;
++------------------+-----------+
+| count(booktitle) | booktitle |
++------------------+-----------+
+|               10 | 0         |
++------------------+-----------+
+1 row in set (0.00 sec)
+10)mysql> select   count(au_lname) from authors ;
++-----------------+
+| count(au_lname) |
++-----------------+
+|              13 |
++-----------------+
+1 row in set (0.00 sec)
+1 row in set (0.05 sec)
+11)mysql> select SUM(revise_sales) from titles  ORDER BY revise_sales DESC;
++-------------------+
+| SUM(revise_sales) |
++-------------------+
+|                 5 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select revise_sales,pub_id from titles  ORDER BY revise_sales DESC,pub_id DESC;
++--------------+--------+
+| revise_sales | pub_id |
++--------------+--------+
+|            5 | 0      |
+|         NULL | trad   |
+|         NULL | trad   |
+|         NULL | psyc   |
+|         NULL | psyc   |
+|         NULL | popu   |
+|         NULL | mod    |
+|         NULL | comp   |
+|         NULL | busi   |
+|         NULL | busi   |
++--------------+--------+
+10 rows in set (0.00 sec)
+13)mysql> select booktitle from  titles WHERE averageprice>1000;
++------------------------------------------------------+
+| booktitle                                            |
++------------------------------------------------------+
+| Cooking with Computers: Surreptitious Balance Sheets |
+| But Is It User Friendly?                             |
+| Secrets of Silicon Valley                            |
++------------------------------------------------------+
+3 rows in set (0.00 sec)
+
+
++-----------------------------------------------+
+| booktitle                                     |
++-----------------------------------------------+
+| 0                                             |
+| You Can Combat Computer Stress!               |
+| Silicon Valley Gastronomic Treats             |
+| Prolonged Data Deprivation: Four Case Studies |
+| Emotional Security: A New Algorithm           |
+| Fifty Years in Buckingham Palace Kitchens     |
+| Fifty Years in Buckingham Palace Kitchens     |
++-----------------------------------------------+
+7 rows in set (0.00 sec)
++--------------+
+14)mysql> select title_id from  titles WHERE averageprice>1000;
++----------+
+| title_id |
++----------+
+| BU11     |
+| PC10     |
+| PC88     |
++----------+
+3 rows in set (0.00 sec)

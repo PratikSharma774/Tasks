@@ -1,0 +1,279 @@
+1)mysql> desc publisher;
+ERROR 1146 (42S02): Table 'pubs.publisher' doesn't exist
+mysql> desc publishers;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| pub_id   | char(4)     | NO   | PRI | NULL    |       |
+| pub_name | varchar(40) | YES  |     | NULL    |       |
+| city     | varchar(20) | YES  |     | NULL    |       |
+| state    | char(2)     | YES  |     | NULL    |       |
+| country  | char(12)    | YES  |     | USA     |       |
++----------+-------------+------+-----+---------+-------+
+5 rows in set (0.18 sec)
+3)
+mysql> select * from publishers;
++--------+-----------------------+------------+-------+---------+
+| pub_id | pub_name              | city       | state | country |
++--------+-----------------------+------------+-------+---------+
+| 0736   | NEW MOON BOOKS        | BOSTON     | MA    | USA     |
+| 0877   | Binnet and Hardley    | Washington | DC    | USA     |
+| 1389   | Algodata Infosystems  | BErkeley   | CA    | USA     |
+| 1622   | Five Lakes Publishing | Chicago    | IL    | USA     |
+| 1756   | Ramona Publishers     | Dalllas    | TX    | USA     |
+| 9901   | GGG&G                 | MGnchen    | NL    | Germany |
+| 9952   | Scootney Books        | New York   | NY    | USA     |
+| 9999   | Lucerne Publishing    | Paris      | NL    | France  |
++--------+-----------------------+------------+-------+---------+
+8 rows in set (0.06 sec)
+mysql> select pub_id from publishers;
++--------+
+| pub_id |
++--------+
+| 0736   |
+| 0877   |
+| 1389   |
+| 1622   |
+| 1756   |
+| 9901   |
+| 9952   |
+| 9999   |
++--------+
+8 rows in set (0.00 sec)
+mysql> select DISTINCT(city) from publishers;
++------------+
+| city       |
++------------+
+| BOSTON     |
+| Washington |
+| BErkeley   |
+| Chicago    |
+| Dalllas    |
+| MGnchen    |
+| New York   |
+| Paris      |
++------------+
+8 rows in set (0.01 sec)
+mysql> SELECT pub_name AS PublishName FROM publishers;
++-----------------------+
+| PublishName           |
++-----------------------+
+| NEW MOON BOOKS        |
+| Binnet and Hardley    |
+| Algodata Infosystems  |
+| Five Lakes Publishing |
+| Ramona Publishers     |
+| GGG&G                 |
+| Scootney Books        |
+| Lucerne Publishing    |
++-----------------------+
+4)mysql> select title_id,booktitle,averageprice from titles;
++----------+------------------------------------------------------+--------------+
+| title_id | booktitle                                            | averageprice |
++----------+------------------------------------------------------+--------------+
+| 0        | 0                                                    |       0.0000 |
+| BU11     | Cooking with Computers: Surreptitious Balance Sheets |    1389.0000 |
+| BU20     | You Can Combat Computer Stress!                      |     736.0000 |
+| MC22     | Silicon Valley Gastronomic Treats                    |     877.0000 |
+| PC10     | But Is It User Friendly?                             |    1389.0000 |
+| PC88     | Secrets of Silicon Valley                            |    1389.0000 |
+| PS33     | Prolonged Data Deprivation: Four Case Studies        |     736.0000 |
+| PS77     | Emotional Security: A New Algorithm                  |     736.0000 |
+| TC42     | Fifty Years in Buckingham Palace Kitchens            |     877.0000 |
+| TC43     | Fifty Years in Buckingham Palace Kitchens            |     877.0000 |
++----------+------------------------------------------------------+--------------+
+10 rows in set (0.00 sec)
+5)mysql> select pub_name from publishers WHERE  country='USA';
++-----------------------+
+| pub_name              |
++-----------------------+
+| NEW MOON BOOKS        |
+| Binnet and Hardley    |
+| Algodata Infosystems  |
+| Five Lakes Publishing |
+| Ramona Publishers     |
+| Scootney Books        |
++-----------------------+
+6 rows in set (0.00 sec)
+6)mysql> select booktitle,averageprice from titles WHERE averageprice>1000;
++------------------------------------------------------+--------------+
+| booktitle                                            | averageprice |
++------------------------------------------------------+--------------+
+| Cooking with Computers: Surreptitious Balance Sheets |    1389.0000 |
+| But Is It User Friendly?                             |    1389.0000 |
+| Secrets of Silicon Valley                            |    1389.0000 |
++------------------------------------------------------+--------------+
+3 rows in set (0.00 sec)
+7)mysql> select booktitle,pubdate from titles WHERE pubdate="1991-06-12";
++-----------------------------------------------+------------+
+| booktitle                                     | pubdate    |
++-----------------------------------------------+------------+
+| Prolonged Data Deprivation: Four Case Studies | 1991-06-12 |
+| Emotional Security: A New Algorithm           | 1991-06-12 |
+| Fifty Years in Buckingham Palace Kitchens     | 1991-06-12 |
+| Fifty Years in Buckingham Palace Kitchens     | 1991-06-12 |
++-----------------------------------------------+------------+
+4 rows in set (0.02 sec)
+8)mysql> select booktitle,pubdate from titles WHERE pubdate="1991-06-30";
++---------------------------------+------------+
+| booktitle                       | pubdate    |
++---------------------------------+------------+
+| You Can Combat Computer Stress! | 1991-06-30 |
+| But Is It User Friendly?        | 1991-06-30 |
++---------------------------------+------------+
+2 rows in set (0.00 sec)
+9)mysql> select booktitle from titles WHERE ofBooks="busi";
+10)mysql> select booktitle from titles WHERE ofBooks="Pysch";
+
+11)mysql> select booktitle from titles WHERE averageprice BETWEEN 700 AND 800;
++-----------------------------------------------+
+| booktitle                                     |
++-----------------------------------------------+
+| You Can Combat Computer Stress!               |
+| Prolonged Data Deprivation: Four Case Studies |
+| Emotional Security: A New Algorithm           |
++-----------------------------------------------+
+3 rows in set (0.01 sec)
+
+mysql> select booktitle from titles WHERE averageprice BETWEEN 800 AND 1000;
++-------------------------------------------+
+| booktitle                                 |
++-------------------------------------------+
+| Silicon Valley Gastronomic Treats         |
+| Fifty Years in Buckingham Palace Kitchens |
+| Fifty Years in Buckingham Palace Kitchens |
++-------------------------------------------+
+3 rows in set (0.00 sec)
+
+12)mysql> select pub_name from publishers WHERE  state ='MA' OR state='DC';
++--------------------+
+| pub_name           |
++--------------------+
+| NEW MOON BOOKS     |
+| Binnet and Hardley |
++--------------------+
+2 rows in set (0.00 sec)
+13)mysql> select pub_name from publishers WHERE NOT  state ='MA' OR state='DC';
++-----------------------+
+| pub_name              |
++-----------------------+
+| Binnet and Hardley    |
+| Algodata Infosystems  |
+| Five Lakes Publishing |
+| Ramona Publishers     |
+| GGG&G                 |
+| Scootney Books        |
+| Lucerne Publishing    |
++-----------------------+
+7 rows in set (0.00 sec)
+14)mysql> select pub_name from publishers WHERE  country ='USA' OR state='Germany';
++-----------------------+
+| pub_name              |
++-----------------------+
+| NEW MOON BOOKS        |
+| Binnet and Hardley    |
+| Algodata Infosystems  |
+| Five Lakes Publishing |
+| Ramona Publishers     |
+| Scootney Books        |
++-----------------------+
+15)
+mysql> select  booktitle from titles WHERE royalty=0;
++-----------------------------------+
+| booktitle                         |
++-----------------------------------+
+| 0                                 |
+| Silicon Valley Gastronomic Treats |
++-----------------------------------+
+2 rows in set (0.00 sec)
+16)mysql> select  booktitle,averageprice,ofBooks from titles WHERE ofBooks='busi' OR ofBooks='trad' AND averageprice>800;
+Empty set (0.00 sec)
+17)
+mysql> SELECT booktitle FROM titles WHERE booktitle REGEXP '^FI';
++-------------------------------------------+
+| booktitle                                 |
++-------------------------------------------+
+| Fifty Years in Buckingham Palace Kitchens |
+| Fifty Years in Buckingham Palace Kitchens |
++-------------------------------------------+
+2 rows in set (0.00 sec)
+18)mysql> SELECT pub_name  FROM publishers  WHERE country REGEXP '^US';
++-----------------------+
+| pub_name              |
++-----------------------+
+| NEW MOON BOOKS        |
+| Binnet and Hardley    |
+| Algodata Infosystems  |
+| Five Lakes Publishing |
+| Ramona Publishers     |
+| Scootney Books        |
++-----------------------+
+19)mysql> SELECT booktitle,title_id  FROM titles  WHERE title_id REGEXP '^P';
++-----------------------------------------------+----------+
+| booktitle                                     | title_id |
++-----------------------------------------------+----------+
+| But Is It User Friendly?                      | PC10     |
+| Secrets of Silicon Valley                     | PC88     |
+| Prolonged Data Deprivation: Four Case Studies | PS33     |
+| Emotional Security: A New Algorithm           | PS77     |
++-----------------------------------------------+----------+
+4 rows in set (0.00 sec
+20)mysql> SELECT booktitle,title_id  FROM titles  WHERE title_id REGEXP '^P|M' ;
++-----------------------------------------------+----------+
+| booktitle                                     | title_id |
++-----------------------------------------------+----------+
+| Silicon Valley Gastronomic Treats             | MC22     |
+| But Is It User Friendly?                      | PC10     |
+| Secrets of Silicon Valley                     | PC88     |
+| Prolonged Data Deprivation: Four Case Studies | PS33     |
+| Emotional Security: A New Algorithm           | PS77     |
++-----------------------------
+21)mysql> SELECT booktitle,title_id  FROM titles  WHERE  title_id REGEXP '^.C' ;
++-------------------------------------------+----------+
+| booktitle                                 | title_id |
++-------------------------------------------+----------+
+| Silicon Valley Gastronomic Treats         | MC22     |
+| But Is It User Friendly?                  | PC10     |
+| Secrets of Silicon Valley                 | PC88     |
+| Fifty Years in Buckingham Palace Kitchens | TC42     |
+| Fifty Years in Buckingham Palace Kitchens | TC43     |
++-------------------------------------------+----------+
+5 rows in set (0.00 sec)
+22)mysql> SELECT booktitle,title_id  FROM titles  WHERE  booktitle REGEXP '!$' ;
++---------------------------------+----------+
+| booktitle                       | title_id |
++---------------------------------+----------+
+| You Can Combat Computer Stress! | BU20     |
++---------------------------------+----------+
+1 row in set (0.00 sec)
+23)mysql> SELECT f_name,au_lname,au_id  FROM authors  WHERE  au_id REGEXP '^....72....' ;
++---------+----------+-------------+
+| f_name  | au_lname | au_id       |
++---------+----------+-------------+
+| Heather | McBadden | 893-72-1158 |
+| Albert  | Ringer   | 998-72-3567 |
++---------+----------+-------------+
+2 rows in set (0.01 sec)
+24)mysql> SELECT f_name,au_lname,au_id  FROM authors  WHERE  au_id REGEXP '^....51.....|^....72....' ;
++---------+----------+-------------+
+| f_name  | au_lname | au_id       |
++---------+----------+-------------+
+| Michel  | DeFrance | 722-51-5454 |
+| Heather | McBadden | 893-72-1158 |
+| Albert  | Ringer   | 998-72-3567 |
++---------+----------+-------------+
+3 rows in set (0.00 sec)
+26)mysql> select au_lname,city,state  from authors WHERE  city REGXP 'a|e|i|o|u $'
+27)mysql> select au_lname,city,state,contact  from authors WHERE  contact=1 OR state='CA';
++------------+----------------+-------+---------+
+| au_lname   | city           | state | contact |
++------------+----------------+-------+---------+
+| Green      | Oakland        | CA    |       1 |
+| Carson     | Berkeley       | CA    |       1 |
+| Straight   | Oakland        | CA    |       1 |
+| Bennet     | Bekeley        | CA    |       1 | 
+| MacFeather | Oakland        | CA    |       1 |
+| Karsen     | Oakland        | CA    |       1 |
+
++------------+----------------+-------+---------+
+12 rows in set (0.00 sec)

@@ -1,0 +1,156 @@
+ 1)show databases;
+2)mysql> select title,price from titles ORDER BY price DESC;
++------------------------------------------------------+-----------+
+| title                                                | price     |
++------------------------------------------------------+-----------+
+| Cooking with Computers: Surreptitious Balance Sheets | 1389.0000 |
+| But Is It User Friendly?                             | 1389.0000 |
+| Secrets of Silicon Valley                            | 1389.0000 |
+| Silicon Valley Gastronomic Treats                    |  877.0000 |
+| Fifty Years in Buckingham Palace Kitchens            |  877.0000 |
+| Fifty Years in Buckingham Palace Kitchens            |  877.0000 |
+| You Can Combat Computer Stress!                      |  736.0000 |
+| Prolonged Data Deprivation: Four Case Studies        |  736.0000 |
+| Emotional Security: A New Algorithm                  |  736.0000 |
++------------------------------------------------------+-----------+
+3)mysql> select title,pubdate from titles ORDER BY pubdate ;
++------------------------------------------------------+------------+
+| title                                                | pubdate    |
++------------------------------------------------------+------------+
+| Cooking with Computers: Surreptitious Balance Sheets | 1991-06-09 |
+| Silicon Valley Gastronomic Treats                    | 1991-06-09 |
+| Prolonged Data Deprivation: Four Case Studies        | 1991-06-12 |
+| Emotional Security: A New Algorithm                  | 1991-06-12 |
+| Fifty Years in Buckingham Palace Kitchens            | 1991-06-12 |
+| Fifty Years in Buckingham Palace Kitchens            | 1991-06-12 |
+| You Can Combat Computer Stress!                      | 1991-06-30 |
+| But Is It User Friendly?                             | 1991-06-30 |
+| Secrets of Silicon Valley                            | 1994-06-12 |
++------------------------------------------------------+------------+
+4)mysql> select title_id,title,price from titles ORDER BY price;
++----------+------------------------------------------------------+-----------+
+| title_id | title                                                | price     |
++----------+------------------------------------------------------+-----------+
+| 0        | 0                                                    |    0.0000 |
+| BU20     | You Can Combat Computer Stress!                      |  736.0000 |
+| PS33     | Prolonged Data Deprivation: Four Case Studies        |  736.0000 |
+| PS77     | Emotional Security: A New Algorithm                  |  736.0000 |
+| MC22     | Silicon Valley Gastronomic Treats                    |  877.0000 |
+| TC42     | Fifty Years in Buckingham Palace Kitchens            |  877.0000 |
+| TC43     | Fifty Years in Buckingham Palace Kitchens            |  877.0000 |
+| BU11     | Cooking with Computers: Surreptitious Balance Sheets | 1389.0000 |
+| PC10     | But Is It User Friendly?                             | 1389.0000 |
+| PC88     | Secrets of Silicon Valley                            | 1389.0000 |
++----------+------------------------------------------------------+-----------+
+5)
+6)mysql> select f_name,city,state from authors ORDER BY  f_name;
++----------+----------------+-------+
+| f_name   | city           | state |
++----------+----------------+-------+
+| Abraham  | Bekeley        | CA    |
+| Albert   | Salt Lake City | UT    |
+| Anne     | Salt Lake City | UT    |
+| Cheryl   | Berkeley       | CA    |
+| Dean     | Oakland        | CA    |
+| Dirk     | Oakland        | CA    |
+| Heather  | Vacaville      | CA    |
+| Livia    | Oakland        | CA    |
+| Marjorie | Oakland        | CA    |
+| Meander  | Lawrence       | KS    |
+| Michel   | Gary           | IN    |
+| Stearns  | Oakland        | CA    |
+| Sylvia   | Rockville      | MD    |
++----------+----------------+-------+
+13 rows in set (0.00 sec)
+7)mysql> select f_name,city,state from authors ORDER BY state ASC ,city DESC ;
++----------+----------------+-------+
+| f_name   | city           | state |
++----------+----------------+-------+
+| Heather  | Vacaville      | CA    |
+| Marjorie | Oakland        | CA    |
+| Dean     | Oakland        | CA    |
+| Dirk     | Oakland        | CA    |
+| Stearns  | Oakland        | CA    |
+| Livia    | Oakland        | CA    |
+| Cheryl   | Berkeley       | CA    |
+| Abraham  | Bekeley        | CA    |
+| Michel   | Gary           | IN    |
+| Meander  | Lawrence       | KS    |
+| Sylvia   | Rockville      | MD    |
+| Anne     | Salt Lake City | UT    |
+| Albert   | Salt Lake City | UT    |
++----------+---------------
+8)mysql> select pub_name from publishers WHERE length(country)!=3;
++--------------------+
+| pub_name           |
++--------------------+
+| GGG&G              |
+| Lucerne Publishing |
++--------------------+
+2 rows in set (0.00 sec)
+9)mysql> select   royalty from titles  WHERE royalty>=1000;
++-----------+
+| price     |
++-----------+
+| 1389.0000 |
+| 1389.0000 |
+| 1389.0000 |
++-----------+
+3 rows in set (0.00 sec)
+10)mysql> select title from titles WHERE pubdate="1991-06-12";
++-----------------------------------------------+
+| title                                         |
++-----------------------------------------------+
+| Prolonged Data Deprivation: Four Case Studies |
+| Emotional Security: A New Algorithm           |
+| Fifty Years in Buckingham Palace Kitchens     |
+| Fifty Years in Buckingham Palace Kitchens     |
++-----------------------------------------------+
+11)
+A)mysql> select title from titles WHERE pubdate="1991-06-12";
++-----------------------------------------------+
+| title                                         |
++-----------------------------------------------+
+| Prolonged Data Deprivation: Four Case Studies |
+| Emotional Security: A New Algorithm           |
+| Fifty Years in Buckingham Palace Kitchens     |
+| Fifty Years in Buckingham Palace Kitchens     |
++-----------------------------------------------+
+4 rows in set (0.00 sec)
+B)mysql> select title from titles WHERE pubdate="1991-06-09";
++------------------------------------------------------+
+| title                                                |
++------------------------------------------------------+
+| Cooking with Computers: Surreptitious Balance Sheets |
+| Silicon Valley Gastronomic Treats             
+12)
+A)mysql> select   dayname("1991-06-09");
++-----------------------+
+| dayname("1991-06-09") |
++-----------------------+
+| Sunday                |
++-----------------------+
+1 row in set (0.00 sec)
+B)
+13)mysql> select title from titles WHERE pubdate<'2000-06-09';
++------------------------------------------------------+
+| title                                                |
++------------------------------------------------------+                                    |
+| Cooking with Computers: Surreptitious Balance Sheets |
+| You Can Combat Computer Stress!                      |
+| Silicon Valley Gastronomic Treats                    |
+| But Is It User Friendly?                             |
+| Secrets of Silicon Valley                            |
+| Prolonged Data Deprivation: Four Case Studies        |
+| Emotional Security: A New Algorithm                  |
+| Fifty Years in Buckingham Palace Kitchens            |
+| Fifty Years in Buckingham Palace Kitchens            |
++------------------------------------------------------+
+10 rows in set (0.00 sec)
+14)2001-06-09
+15)mysql> select title from titles WHERE pubdate="000-00-00";
++------------------------------------------------------+
+| title                                                |
++------------------------------------------------------+                                    |
+||Cooking with Computers: Surreptitious Balance Sheets   No Publisher Date|
+16)
