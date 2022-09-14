@@ -1,0 +1,140 @@
+2021-10-12 14:37:29 weka.gui.explorer.Explorer main
+INFO: Logging started
+2021-10-12 14:37:29 weka.gui.GenericObjectEditor registerEditors
+INFO: ---Registering Weka Editors---
+2021-10-12 14:37:30 weka.experiment.DatabaseUtils initialize
+WARNING: Trying to add database driver (JDBC): jdbc.idbDriver - Warning, not in CLASSPATH?
+2021-10-12 14:37:30 weka.gui.beans.BeansProperties loadProperties
+INFO: [KnowledgeFlow] Loading properties and plugins...
+2021-10-12 14:37:30 weka.gui.beans.KnowledgeFlowApp init
+INFO: [KnowledgeFlow] Initializing KF...
+2021-10-12 14:37:31 weka.gui.explorer.Explorer <init>
+INFO: Weka Explorer
+2021-10-12 14:37:31 weka.gui.explorer.Explorer <init>
+INFO: (c) 1999-2020 The University of Waikato, Hamilton, New Zealand
+2021-10-12 14:37:31 weka.gui.explorer.Explorer <init>
+INFO: web: https://www.cs.waikato.ac.nz/~ml/weka/
+2021-10-12 14:37:31 weka.gui.explorer.Explorer <init>
+INFO: Started on Tuesday, 12 October 2021
+Loading instances from C:\Users\prati\OneDrive\Desktop\Employee1.arff
+2021-10-12 14:37:32 weka.gui.explorer.PreprocessPanel$21 run
+INFO: Base relation is now company (5 instances)
+Tester set to: weka.experiment.PairedCorrectedTTester
+2021-10-12 14:38:15 weka.gui.explorer.Explorer <init>
+INFO: Weka Explorer
+2021-10-12 14:38:15 weka.gui.explorer.Explorer <init>
+INFO: (c) 1999-2020 The University of Waikato, Hamilton, New Zealand
+2021-10-12 14:38:15 weka.gui.explorer.Explorer <init>
+INFO: web: https://www.cs.waikato.ac.nz/~ml/weka/
+2021-10-12 14:38:15 weka.gui.explorer.Explorer <init>
+INFO: Started on Tuesday, 12 October 2021
+2021-10-12 14:38:18 weka.gui.explorer.Explorer <init>
+INFO: Weka Explorer
+2021-10-12 14:38:18 weka.gui.explorer.Explorer <init>
+INFO: (c) 1999-2020 The University of Waikato, Hamilton, New Zealand
+2021-10-12 14:38:18 weka.gui.explorer.Explorer <init>
+INFO: web: https://www.cs.waikato.ac.nz/~ml/weka/
+2021-10-12 14:38:18 weka.gui.explorer.Explorer <init>
+INFO: Started on Tuesday, 12 October 2021
+2021-10-12 14:38:19 weka.gui.explorer.Explorer <init>
+INFO: Weka Explorer
+2021-10-12 14:38:19 weka.gui.explorer.Explorer <init>
+INFO: (c) 1999-2020 The University of Waikato, Hamilton, New Zealand
+2021-10-12 14:38:19 weka.gui.explorer.Explorer <init>
+INFO: web: https://www.cs.waikato.ac.nz/~ml/weka/
+2021-10-12 14:38:19 weka.gui.explorer.Explorer <init>
+INFO: Started on Tuesday, 12 October 2021
+2021-10-12 14:38:21 weka.gui.explorer.Explorer <init>
+INFO: Weka Explorer
+2021-10-12 14:38:21 weka.gui.explorer.Explorer <init>
+INFO: (c) 1999-2020 The University of Waikato, Hamilton, New Zealand
+2021-10-12 14:38:21 weka.gui.explorer.Explorer <init>
+INFO: web: https://www.cs.waikato.ac.nz/~ml/weka/
+2021-10-12 14:38:21 weka.gui.explorer.Explorer <init>
+INFO: Started on Tuesday, 12 October 2021
+2021-10-12 14:54:39 weka.gui.explorer.Explorer <init>
+INFO: Weka Explorer
+2021-10-12 14:54:39 weka.gui.explorer.Explorer <init>
+INFO: (c) 1999-2020 The University of Waikato, Hamilton, New Zealand
+2021-10-12 14:54:39 weka.gui.explorer.Explorer <init>
+INFO: web: https://www.cs.waikato.ac.nz/~ml/weka/
+2021-10-12 14:54:39 weka.gui.explorer.Explorer <init>
+INFO: Started on Tuesday, 12 October 2021
+2021-10-12 14:55:30 weka.gui.explorer.Explorer <init>
+INFO: Weka Explorer
+2021-10-12 14:55:30 weka.gui.explorer.Explorer <init>
+INFO: (c) 1999-2020 The University of Waikato, Hamilton, New Zealand
+2021-10-12 14:55:30 weka.gui.explorer.Explorer <init>
+INFO: web: https://www.cs.waikato.ac.nz/~ml/weka/
+2021-10-12 14:55:30 weka.gui.explorer.Explorer <init>
+INFO: Started on Tuesday, 12 October 2021
+2021-10-12 14:55:49 weka.gui.explorer.PreprocessPanel$21 run
+INFO: Base relation is now company (5 instances)
+2021-10-12 14:56:21 weka.gui.explorer.Explorer <init>
+INFO: Weka Explorer
+2021-10-12 14:56:21 weka.gui.explorer.Explorer <init>
+INFO: (c) 1999-2020 The University of Waikato, Hamilton, New Zealand
+2021-10-12 14:56:21 weka.gui.explorer.Explorer <init>
+INFO: web: https://www.cs.waikato.ac.nz/~ml/weka/
+2021-10-12 14:56:21 weka.gui.explorer.Explorer <init>
+INFO: Started on Tuesday, 12 October 2021
+2021-10-12 14:56:35 weka.gui.explorer.PreprocessPanel$21 run
+INFO: Base relation is now company (5 instances)
+2021-10-12 14:56:58 weka.gui.explorer.Explorer <init>
+INFO: Weka Explorer
+2021-10-12 14:56:58 weka.gui.explorer.Explorer <init>
+INFO: (c) 1999-2020 The University of Waikato, Hamilton, New Zealand
+2021-10-12 14:56:58 weka.gui.explorer.Explorer <init>
+INFO: web: https://www.cs.waikato.ac.nz/~ml/weka/
+2021-10-12 14:56:58 weka.gui.explorer.Explorer <init>
+INFO: Started on Tuesday, 12 October 2021
+2021-10-12 14:56:59 weka.gui.explorer.Explorer <init>
+INFO: Weka Explorer
+2021-10-12 14:56:59 weka.gui.explorer.Explorer <init>
+INFO: (c) 1999-2020 The University of Waikato, Hamilton, New Zealand
+2021-10-12 14:56:59 weka.gui.explorer.Explorer <init>
+INFO: web: https://www.cs.waikato.ac.nz/~ml/weka/
+2021-10-12 14:56:59 weka.gui.explorer.Explorer <init>
+INFO: Started on Tuesday, 12 October 2021
+2021-10-12 14:57:57 weka.gui.explorer.Explorer <init>
+INFO: Weka Explorer
+2021-10-12 14:57:57 weka.gui.explorer.Explorer <init>
+INFO: (c) 1999-2020 The University of Waikato, Hamilton, New Zealand
+2021-10-12 14:57:57 weka.gui.explorer.Explorer <init>
+INFO: web: https://www.cs.waikato.ac.nz/~ml/weka/
+2021-10-12 14:57:57 weka.gui.explorer.Explorer <init>
+INFO: Started on Tuesday, 12 October 2021
+2021-10-12 14:58:12 weka.gui.explorer.PreprocessPanel$21 run
+INFO: Base relation is now company (5 instances)
+2021-10-12 14:59:07 weka.gui.explorer.Explorer <init>
+INFO: Weka Explorer
+2021-10-12 14:59:07 weka.gui.explorer.Explorer <init>
+INFO: (c) 1999-2020 The University of Waikato, Hamilton, New Zealand
+2021-10-12 14:59:07 weka.gui.explorer.Explorer <init>
+INFO: web: https://www.cs.waikato.ac.nz/~ml/weka/
+2021-10-12 14:59:07 weka.gui.explorer.Explorer <init>
+INFO: Started on Tuesday, 12 October 2021
+2021-10-12 14:59:21 weka.gui.explorer.PreprocessPanel$21 run
+INFO: Base relation is now company (5 instances)
+2021-10-12 15:41:05 weka.gui.explorer.Explorer <init>
+INFO: Weka Explorer
+2021-10-12 15:41:05 weka.gui.explorer.Explorer <init>
+INFO: (c) 1999-2020 The University of Waikato, Hamilton, New Zealand
+2021-10-12 15:41:05 weka.gui.explorer.Explorer <init>
+INFO: web: https://www.cs.waikato.ac.nz/~ml/weka/
+2021-10-12 15:41:05 weka.gui.explorer.Explorer <init>
+INFO: Started on Tuesday, 12 October 2021
+2021-10-12 15:41:35 weka.gui.explorer.PreprocessPanel$21 run
+INFO: Base relation is now company (5 instances)
+2021-10-12 16:06:39 weka.gui.explorer.Explorer <init>
+INFO: Weka Explorer
+2021-10-12 16:06:39 weka.gui.explorer.Explorer <init>
+INFO: (c) 1999-2020 The University of Waikato, Hamilton, New Zealand
+2021-10-12 16:06:39 weka.gui.explorer.Explorer <init>
+INFO: web: https://www.cs.waikato.ac.nz/~ml/weka/
+2021-10-12 16:06:39 weka.gui.explorer.Explorer <init>
+INFO: Started on Tuesday, 12 October 2021
+2021-10-12 16:06:51 weka.gui.explorer.PreprocessPanel$21 run
+INFO: Base relation is now weather (10 instances)
+2021-10-12 16:07:48 weka.gui.explorer.PreprocessPanel$21 run
+INFO: Base relation is now weather (10 instances)
