@@ -1,0 +1,123 @@
+{
+    "location": {
+      "city": "Sunnyvale",
+      "region": " CA",
+      "woeid": 2502265,
+      "country": "United States",
+      "lat": 37.371609,
+      "long": -122.038254,
+      "timezone_id": "America/Los_Angeles"
+    },
+    "current_observation": {
+      "wind": {
+        "chill": 74,
+        "direction": 0,
+        "speed": 16
+      },
+      "atmosphere": {
+        "humidity": 49,
+        "visibility": 10,
+        "pressure": 29.92
+      },
+      "astronomy": {
+        "sunrise": "6:48 am",
+        "sunset": "7:19 pm"
+      },
+      "condition": {
+        "code": 32,
+        "text": "Sunny",
+        "temperature": 73
+      },
+      "pubDate": 1663076400
+    },
+    "forecasts": [
+      {
+        "day": "Tue",
+        "date": 1663041600,
+        "low": 60,
+        "high": 73,
+        "text": "Partly Cloudy",
+        "code": 30
+      },
+      {
+        "day": "Wed",
+        "date": 1663128000,
+        "low": 60,
+        "high": 71,
+        "text": "Partly Cloudy",
+        "code": 30
+      },
+      {
+        "day": "Thu",
+        "date": 1663214400,
+        "low": 58,
+        "high": 70,
+        "text": "Partly Cloudy",
+        "code": 30
+      },
+      {
+        "day": "Fri",
+        "date": 1663300800,
+        "low": 57,
+        "high": 70,
+        "text": "Mostly Sunny",
+        "code": 34
+      },
+      {
+        "day": "Sat",
+        "date": 1663387200,
+        "low": 57,
+        "high": 69,
+        "text": "Mostly Sunny",
+        "code": 34
+      },
+      {
+        "day": "Sun",
+        "date": 1663473600,
+        "low": 55,
+        "high": 69,
+        "text": "Mostly Sunny",
+        "code": 34
+      },
+      {
+        "day": "Mon",
+        "date": 1663560000,
+        "low": 60,
+        "high": 76,
+        "text": "Sunny",
+        "code": 32
+      },
+      {
+        "day": "Tue",
+        "date": 1663646400,
+        "low": 62,
+        "high": 81,
+        "text": "Sunny",
+        "code": 32
+      },
+      {
+        "day": "Wed",
+        "date": 1663732800,
+        "low": 61,
+        "high": 84,
+        "text": "Sunny",
+        "code": 32
+      },
+      {
+        "day": "Thu",
+        "date": 1663819200,
+        "low": 61,
+        "high": 85,
+        "text": "Sunny",
+        "code": 32
+      },
+      {
+        "day": "Fri",
+        "date": 1663905600,
+        "low": 63,
+        "high": 87,
+        "text": "Sunny",
+        "code": 32
+      }
+    ]
+  }

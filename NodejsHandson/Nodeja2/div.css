@@ -1,0 +1,13 @@
+body {
+    background: blue;
+   }
+#div {
+    margin: 25px;
+    background: white;
+    border-radius: 2px;
+    padding: 25px;
+    width: 100px;
+    height: 100px;
+    transition: all 0.2s;
+   }
+   
