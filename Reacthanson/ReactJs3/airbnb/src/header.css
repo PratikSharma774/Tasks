@@ -1,0 +1,22 @@
+/* .navlist{
+display:flex;
+justify-content: space-between;
+align-items: center;
+}
+.navbar{
+    display:flex;
+    justify-content: space-evenly;
+align-items: center;
+margin-top:2px;
+} */
+.nav{
+height: 70px;
+ display: flex;
+ background-color:wheat;
+ padding: 20px 35px;
+ box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0,
+0.1)
+}
+.nav ul img{
+    max-width: 100px;
+}
